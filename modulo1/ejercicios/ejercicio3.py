@@ -1,25 +1,31 @@
-## ejemplo
-""" nombre="datux"
-msg0="Hola "+ nombre
-msg1="Hola {}  {}".format(nombre)
-msg2=f"Hola {nombre}"
-print(msg0)
-print(msg1)
-print(msg2)
-print("4.Hola",nombre) """
+#5 mostrar lista de alumnos aprobados y desaprobados
+notas=int(input("Ingrese la cantidad de notas"))
+vec=[]
+n=0
 
-nombre=input("Ingrese su nombre:")
-edad=input("Ingrese su edad:")
-correo=input("Ingrese su correo:")
+for i in range(1,notas+1):
+    nota=int(input("Nota: "))
+    n=n+nota
+    vec.append(nota)
 
-msg0="Hola "+ nombre + " " +edad + " "+ correo # str
-msg1="Hola {} {} {}".format(nombre,edad,correo) # str
-msg2=f"Hola {nombre} {edad} {correo}"  #str
-print(msg0) # al utlimo concatena un \n que es un salto de linea
-print(msg1)
-print(msg2)
-print("comparacion")
-##### lo puedo simplificar en un solo print 
-print(msg0,"\n",msg1,"\n"+msg2)
-print(msg0,msg1,msg2)
+promedio=n/len(vec)
+
+npromedio=0
+for j in vec:
+    if j>promedio:
+        npromedio=npromedio+1
+
+aprobado=0
+for h in vec:
+    if h>10:
+     aprobado=aprobado+1
+
+reprobado=0
+for k in vec:
+    if k<11:
+        reprobado=reprobado+1
+
+print("Aprobado:",aprobado)
+print("Desaprobado:",reprobado)
+
 
